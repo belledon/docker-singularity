@@ -32,3 +32,18 @@ Pull an `alpine` image from the Sylabs repos.
 docker run -v $HOME:$HOME --privileged -t --rm quay.io/singularity/singularity:v3.4.0 exec $HOME/test/alpine.sif echo "helloworld"
 ```
 
+## Examples
+
+### Fasttext
+
+    Included is a singularity definition file `Singularity` that describes a simple container with `fastText`.
+    
+    To build the container run:
+    
+    ```bash
+    docker run -v $HOME:$HOME -t --privileged --rm quay.io/singularity/singularity:v3.4.0 build $PWD/cml.sif $PWD/Singularity
+    ```
+    
+    This will build a container called `cml.sif` in your current directory (assuming you are in the repo).
+    
+    
